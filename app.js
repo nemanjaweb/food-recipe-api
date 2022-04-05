@@ -1,6 +1,6 @@
 const searchBtn = document.getElementById("search-btn");
 const mealList = document.getElementById("meal");
-const mealDetailsContent = document.querySelector("meal-details-content");
+const mealDetailsContent = document.querySelector(".meal-details-content");
 const recipeCloseBtn = document.getElementById("recipe-close-btn");
 
 //event listeners
@@ -61,7 +61,6 @@ function mealRecipeModal(meal) {
   console.log(meal);
   meal = meal[0];
   let html = `
-      
       <h2 class = "recipe-title">${meal.strMeal}</h2>
       <p class = "recipe-category">${meal.strCategory}</p>
       <div class = "recipe-instruct">
@@ -73,8 +72,7 @@ function mealRecipeModal(meal) {
       </div>
       <div class = "recipe-link">
           <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
-      </div>
-      
+      </div>    
   `;
   mealDetailsContent.innerHTML = html;
   mealDetailsContent.parentElement.classList.add("showRecipe");
